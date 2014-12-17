@@ -1,10 +1,10 @@
-function buscarmodelo()
+function buscarfoto()
 {
 			 alert('func');
  $.ajax({
 
 	type: "POST",
-	url: "http://192.168.1.166/proyecto/Modelofoto.php"
+	url: "http://192.168.1.166/proyecto/Foto.php"
 	 
  }).done(function(msg){
 	 var DatosJSON = JSON.parse(msg);
@@ -12,10 +12,10 @@ function buscarmodelo()
 	 if (DatosJSON.datos ==1)
 	 {
 		 alert('datos');
-		 $('#modelo').empty();
+		 $('#foto').empty();
 		  for (var i = 0; i <DatosJSON.vestidos.length  ;i++)
 		  {
-			  $('#modelo').append(' <div align="center"> <hr color="#6600FF"> Fotografia: <img src="http://192.168.1.166/proyecto/recursos/fotos/'+DatosJSON.vestidos[i].Modelo+'.jpg"> <br> <hr color="#6600FF">     </div>');
+			  $('#foto').append(' <div align="center"> <hr color="#6600FF"> Fotografia: <img src="http://192.168.1.166/proyecto/recursos/fotos/'+DatosJSON.vestidos[i].Modelo+'.jpg"> <br> <hr color="#6600FF">     </div>');
 		  }
 		 
 	 }
@@ -27,6 +27,34 @@ if (DatosJSON.datos ==0)
  });
 }
 
+function buscardatos()
+{
+			 alert('func');
+ $.ajax({
+
+	type: "POST",
+	url: "http://192.168.1.166/proyecto/Datos.php"
+	 
+ }).done(function(msg){
+	 var DatosJSON = JSON.parse(msg);
+	 alert(msg);
+	 if (DatosJSON.datos ==1)
+	 {
+		 alert('datos');
+		 $('#datos').empty();
+		  for (var i = 0; i <DatosJSON.vestidos.length  ;i++)
+		  {
+			  $('#datos').append(' <div align="center"> <hr color="#6600FF">   Modelo:    '+DatosJSON.vestidos[i].Modelo+' <br> <br>   Color:    '+DatosJSON.vestidos[i].Color+'  <br>    <br>  Fotografia: <img src="http://192.168.1.166/proyecto/recursos/fotos/'+DatosJSON.vestidos[i].Modelo+'.jpg">    <br>    <br>    Talla:    '+DatosJSON.vestidos[i].Talla+'    <hr color="#6600FF">     </div>');
+		  }
+		 
+	 }
+	 
+if (DatosJSON.datos ==0)
+	 {
+		 alert ("no hay vestidos")
+	 }
+ });
+}
 
 function buscarsirena()
 {
@@ -439,9 +467,13 @@ $(document).ready(function(e) {
 		 			 alert('listo'); //no
 					 
 		         
-                          $('#modelo').tap(function(){
+                          $('#foto').tap(function(){
 			 alert('dentro');
-			 		 buscarmodelo()
+			 		 buscarfoto()
+			 });
+			              $('#datos').tap(function(){
+			 alert('dentro');
+			 		 buscardatos()
 			 });		          
                           $('#sirena').tap(function(){
 			 alert('dentro');
