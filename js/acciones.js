@@ -1,33 +1,3 @@
-function buscarmodelo()
-{
-			 alert('func');
- $.ajax({
-
-	type: "POST",
-	url: "http://192.168.1.166/proyecto/Modelofoto.php"
-	 
- }).done(function(msg){
-	 var DatosJSON = JSON.parse(msg);
-	 alert(msg);
-	 if (DatosJSON.datos ==1)
-	 {
-		 alert('datos');
-		 $('#page').empty();
-		  for (var i = 0; i <DatosJSON.vestidos.length  ;i++)
-		  {
-			  $('#page').append(' <div align="center"> <hr color="#6600FF"> Fotografia: <img src="http://192.168.1.166/proyecto/recursos/fotos/'+DatosJSON.vestidos[i].Modelo+'.jpg"> <br> <hr color="#6600FF">     </div>');
-		  }
-		 
-	 }
-	 
-if (DatosJSON.datos ==0)
-	 {
-		 alert ("no hay vestidos")
-	 }
- });
-}
-
-
 function buscarsirena()
 {
 			 alert('func');
@@ -158,17 +128,17 @@ function buscarorganza()
 	 if (DatosJSON.datos ==1)
 	 {
 		 alert('datos');
-		 $('#tela').empty();
+		 $('#corte').empty();
 		  for (var i = 0; i <DatosJSON.vestidos.length  ;i++)
 		  {
-			  $('#tela').append(' <div align="center"> <hr color="#6600FF">     Modelo:    '+DatosJSON.vestidos[i].Modelo+' <br> <br>   Color:    '+DatosJSON.vestidos[i].Color+'  <br>    <br>  Fotografia: <img src="http://192.168.1.166/proyecto/recursos/fotos/'+DatosJSON.vestidos[i].Modelo+'.jpg"> <hr color="#6600FF">     </div>');
+			  $('#corte').append(' <div align="center"> <hr color="#6600FF">     Color:    '+DatosJSON.vestidos[i].Color+'  <br>    <br>  Fotografia: <img src="http://192.168.1.166/proyecto/recursos/fotos/'+DatosJSON.vestidos[i].Modelo+'.jpg"><hr color="#6600FF"></div>');
 		  }
 		 
 	 }
 	 
 if (DatosJSON.datos ==0)
 	 {
-		 alert ("no hay vestidos con esa tela")
+		 alert ("no hay vestidos con ese tipo de tela")
 	 }
  });
 }
@@ -187,17 +157,17 @@ function buscartul()
 	 if (DatosJSON.datos ==1)
 	 {
 		 alert('datos');
-		 $('#tela').empty();
+		 $('#corte').empty();
 		  for (var i = 0; i <DatosJSON.vestidos.length  ;i++)
 		  {
-			  $('#tela').append(' <div align="center"> <hr color="#6600FF">     Modelo:    '+DatosJSON.vestidos[i].Modelo+' <br> <br>   Color:    '+DatosJSON.vestidos[i].Color+'  <br>    <br>  Fotografia: <img src="http://192.168.1.166/proyecto/recursos/fotos/'+DatosJSON.vestidos[i].Modelo+'.jpg"> <hr color="#6600FF">     </div>');
+			  $('#corte').append(' <div align="center"> <hr color="#6600FF">     Color:    '+DatosJSON.vestidos[i].Color+'  <br>    <br>  Fotografia: <img src="http://192.168.1.166/proyecto/recursos/fotos/'+DatosJSON.vestidos[i].Modelo+'.jpg"><hr color="#6600FF"></div>');
 		  }
 		 
 	 }
 	 
 if (DatosJSON.datos ==0)
 	 {
-		 alert ("no hay vestidos con esa tela")
+		 alert ("no hay vestidos con ese tipo de tela")
 	 }
  });
 }
@@ -216,21 +186,20 @@ function buscarseda()
 	 if (DatosJSON.datos ==1)
 	 {
 		 alert('datos');
-		 $('#tela').empty();
+		 $('#corte').empty();
 		  for (var i = 0; i <DatosJSON.vestidos.length  ;i++)
 		  {
-			  $('#tela').append(' <div align="center"> <hr color="#6600FF">     Modelo:    '+DatosJSON.vestidos[i].Modelo+' <br> <br>   Color:    '+DatosJSON.vestidos[i].Color+'  <br>    <br>  Fotografia: <img src="http://192.168.1.166/proyecto/recursos/fotos/'+DatosJSON.vestidos[i].Modelo+'.jpg"> <hr color="#6600FF">     </div>');
+			  $('#corte').append(' <div align="center"> <hr color="#6600FF">     Color:    '+DatosJSON.vestidos[i].Color+'  <br>    <br>  Fotografia: <img src="http://192.168.1.166/proyecto/recursos/fotos/'+DatosJSON.vestidos[i].Modelo+'.jpg"><hr color="#6600FF"></div>');
 		  }
 		 
 	 }
 	 
 if (DatosJSON.datos ==0)
 	 {
-		 alert ("no hay vestidos con esa tela")
+		 alert ("no hay vestidos con ese tipo de tela")
 	 }
  });
 }
-
 function buscarguipiur()
 {
 			 alert('func');
@@ -245,21 +214,20 @@ function buscarguipiur()
 	 if (DatosJSON.datos ==1)
 	 {
 		 alert('datos');
-		 $('#tela').empty();
+		 $('#corte').empty();
 		  for (var i = 0; i <DatosJSON.vestidos.length  ;i++)
 		  {
-			  $('#tela').append(' <div align="center"> <hr color="#6600FF">     Modelo:    '+DatosJSON.vestidos[i].Modelo+' <br> <br>   Color:    '+DatosJSON.vestidos[i].Color+'  <br>    <br>  Fotografia: <img src="http://192.168.1.166/proyecto/recursos/fotos/'+DatosJSON.vestidos[i].Modelo+'.jpg"> <hr color="#6600FF">     </div>');
+			  $('#corte').append(' <div align="center"> <hr color="#6600FF">     Color:    '+DatosJSON.vestidos[i].Color+'  <br>    <br>  Fotografia: <img src="http://192.168.1.166/proyecto/recursos/fotos/'+DatosJSON.vestidos[i].Modelo+'.jpg"><hr color="#6600FF"></div>');
 		  }
 		 
 	 }
 	 
 if (DatosJSON.datos ==0)
 	 {
-		 alert ("no hay vestidos con esa tela")
+		 alert ("no hay vestidos con ese tipo de tela")
 	 }
  });
 }
-
 function buscarshantu()
 {
 			 alert('func');
@@ -274,21 +242,20 @@ function buscarshantu()
 	 if (DatosJSON.datos ==1)
 	 {
 		 alert('datos');
-		 $('#tela').empty();
+		 $('#corte').empty();
 		  for (var i = 0; i <DatosJSON.vestidos.length  ;i++)
 		  {
-			  $('#tela').append(' <div align="center"> <hr color="#6600FF">     Modelo:    '+DatosJSON.vestidos[i].Modelo+' <br> <br>   Color:    '+DatosJSON.vestidos[i].Color+'  <br>    <br>  Fotografia: <img src="http://192.168.1.166/proyecto/recursos/fotos/'+DatosJSON.vestidos[i].Modelo+'.jpg"> <hr color="#6600FF">     </div>');
+			  $('#corte').append(' <div align="center"> <hr color="#6600FF">     Color:    '+DatosJSON.vestidos[i].Color+'  <br>    <br>  Fotografia: <img src="http://192.168.1.166/proyecto/recursos/fotos/'+DatosJSON.vestidos[i].Modelo+'.jpg"><hr color="#6600FF"></div>');
 		  }
 		 
 	 }
 	 
 if (DatosJSON.datos ==0)
 	 {
-		 alert ("no hay vestidos con esa tela")
+		 alert ("no hay vestidos con ese tipo de tela")
 	 }
  });
 }
-
 function buscarraso()
 {
 			 alert('func');
@@ -303,17 +270,17 @@ function buscarraso()
 	 if (DatosJSON.datos ==1)
 	 {
 		 alert('datos');
-		 $('#tela').empty();
+		 $('#corte').empty();
 		  for (var i = 0; i <DatosJSON.vestidos.length  ;i++)
 		  {
-			  $('#tela').append(' <div align="center"> <hr color="#6600FF">     Modelo:    '+DatosJSON.vestidos[i].Modelo+' <br> <br>   Color:    '+DatosJSON.vestidos[i].Color+'  <br>    <br>  Fotografia: <img src="http://192.168.1.166/proyecto/recursos/fotos/'+DatosJSON.vestidos[i].Modelo+'.jpg"> <hr color="#6600FF">     </div>');
+			  $('#corte').append(' <div align="center"> <hr color="#6600FF">     Color:    '+DatosJSON.vestidos[i].Color+'  <br>    <br>  Fotografia: <img src="http://192.168.1.166/proyecto/recursos/fotos/'+DatosJSON.vestidos[i].Modelo+'.jpg"><hr color="#6600FF"></div>');
 		  }
 		 
 	 }
 	 
 if (DatosJSON.datos ==0)
 	 {
-		 alert ("no hay vestidos con esa tela")
+		 alert ("no hay vestidos con ese tipo de tela")
 	 }
  });
 }
@@ -332,20 +299,22 @@ function buscarmanta()
 	 if (DatosJSON.datos ==1)
 	 {
 		 alert('datos');
-		 $('#tela').empty();
+		 $('#corte').empty();
 		  for (var i = 0; i <DatosJSON.vestidos.length  ;i++)
 		  {
-			  $('#tela').append(' <div align="center"> <hr color="#6600FF">     Modelo:    '+DatosJSON.vestidos[i].Modelo+' <br> <br>   Color:    '+DatosJSON.vestidos[i].Color+'  <br>    <br>  Fotografia: <img src="http://192.168.1.166/proyecto/recursos/fotos/'+DatosJSON.vestidos[i].Modelo+'.jpg"> <hr color="#6600FF">     </div>');
+			  $('#corte').append(' <div align="center"> <hr color="#6600FF">     Color:    '+DatosJSON.vestidos[i].Color+'  <br>    <br>  Fotografia: <img src="http://192.168.1.166/proyecto/recursos/fotos/'+DatosJSON.vestidos[i].Modelo+'.jpg"><hr color="#6600FF"></div>');
 		  }
 		 
 	 }
 	 
 if (DatosJSON.datos ==0)
 	 {
-		 alert ("no hay vestidos con esa tela")
+		 alert ("no hay vestidos con ese tipo de tela")
 	 }
  });
 }
+
+
 
 function buscarrojo()
 {
@@ -361,10 +330,10 @@ function buscarrojo()
 	 if (DatosJSON.datos ==1)
 	 {
 		 alert('datos');
-		 $('#color').empty();
+		 $('#corte').empty();
 		  for (var i = 0; i <DatosJSON.vestidos.length  ;i++)
 		  {
-			  $('#color').append(' <div align="center"> <hr color="#6600FF">     Modelo:    '+DatosJSON.vestidos[i].Modelo+' <br> <br> Fotografia: <img src="http://192.168.1.166/proyecto/recursos/fotos/'+DatosJSON.vestidos[i].Modelo+'.jpg"> <hr color="#6600FF">     </div>');
+			  $('#corte').append(' <div align="center"> <hr color="#6600FF">Fotografia: <img src="http://192.168.1.166/proyecto/recursos/fotos/'+DatosJSON.vestidos[i].Modelo+'.jpg"><hr color="#6600FF"></div>');
 		  }
 		 
 	 }
@@ -390,10 +359,10 @@ function buscarrosa()
 	 if (DatosJSON.datos ==1)
 	 {
 		 alert('datos');
-		 $('#color').empty();
+		 $('#corte').empty();
 		  for (var i = 0; i <DatosJSON.vestidos.length  ;i++)
 		  {
-			  $('#color').append(' <div align="center"> <hr color="#6600FF">     Modelo:    '+DatosJSON.vestidos[i].Modelo+' <br> <br> Fotografia: <img src="http://192.168.1.166/proyecto/recursos/fotos/'+DatosJSON.vestidos[i].Modelo+'.jpg"> <hr color="#6600FF">     </div>');
+			  $('#corte').append(' <div align="center"> <hr color="#6600FF">Fotografia: <img src="http://192.168.1.166/proyecto/recursos/fotos/'+DatosJSON.vestidos[i].Modelo+'.jpg"><hr color="#6600FF"></div>');
 		  }
 		 
 	 }
@@ -419,10 +388,10 @@ function buscarazul()
 	 if (DatosJSON.datos ==1)
 	 {
 		 alert('datos');
-		 $('#color').empty();
+		 $('#corte').empty();
 		  for (var i = 0; i <DatosJSON.vestidos.length  ;i++)
 		  {
-			  $('#color').append(' <div align="center"> <hr color="#6600FF">     Modelo:    '+DatosJSON.vestidos[i].Modelo+' <br> <br> Fotografia: <img src="http://192.168.1.166/proyecto/recursos/fotos/'+DatosJSON.vestidos[i].Modelo+'.jpg"> <hr color="#6600FF">     </div>');
+			  $('#corte').append(' <div align="center"> <hr color="#6600FF">Fotografia: <img src="http://192.168.1.166/proyecto/recursos/fotos/'+DatosJSON.vestidos[i].Modelo+'.jpg"><hr color="#6600FF"></div>');
 		  }
 		 
 	 }
@@ -433,22 +402,54 @@ if (DatosJSON.datos ==0)
 	 }
  });
 }
+
+function buscarmodelo()
+{
+			 alert('func');
+ $.ajax({
+
+	type: "POST",
+	url: "http://192.168.1.166/proyecto/Modelofoto.php"
+	 
+ }).done(function(msg){
+	 var DatosJSON = JSON.parse(msg);
+	 alert(msg);
+	 if (DatosJSON.datos ==1)
+	 {
+		 alert('datos');
+		 $('#corte').empty();
+		  for (var i = 0; i <DatosJSON.vestidos.length  ;i++)
+		  {
+			  $('#corte').append(' <div align="center"> <hr color="#6600FF">Fotografia: <img src="http://192.168.1.166/proyecto/recursos/fotos/'+DatosJSON.vestidos[i].Modelo+'.jpg"><hr color="#6600FF"></div>');
+		  }
+		 
+	 }
+	 
+if (DatosJSON.datos ==0)
+	 {
+		 alert ("no hay vestidos con ese color")
+	 }
+ });
+}
+
+
+
+
+
+
+
+
 //no
 $(document).ready(function(e) {
  document.addEventListener("deviceready",function(){
 		 			 alert('listo'); //no
 					 
-		         
-                          $('#page').tap(function(){
-			 alert('dentro');
-			 		 buscarmodelo()
-			 });		          
-                          $('#sirena').tap(function(){
+		        $('#sirena').tap(function(){
 			 alert('dentro');
 			 		 buscarsirena()
 			 });
 			 
-			  $('#strapless').tap(function(){
+			 $('#strapless').tap(function(){
 			 alert('dentro');
 			 		 buscarstrapless()
 			 });
@@ -461,14 +462,16 @@ $(document).ready(function(e) {
 			 alert('dentro');
 			 		 buscardrapeado()
 			 });
-                          $('#organza').tap(function(){
+                         $('#organza').tap(function(){
 			 alert('dentro');
 			 		 buscarorganza()
 			 });
-			  $('#tul').tap(function(){
+			 
+			 $('#tul').tap(function(){
 			 alert('dentro');
 			 		 buscartul()
 			 });
+			 
 			  $('#seda').tap(function(){
 			 alert('dentro');
 			 		 buscarseda()
@@ -477,30 +480,40 @@ $(document).ready(function(e) {
 			 alert('dentro');
 			 		 buscarguipiur()
 			 });
-			  $('#shantu').tap(function(){
+                        $('#shantu').tap(function(){
 			 alert('dentro');
 			 		 buscarshantu()
 			 });
-			  $('#raso').tap(function(){
+			 
+			 $('#raso').tap(function(){
 			 alert('dentro');
 			 		 buscarraso()
 			 });
+			 
 			  $('#manta').tap(function(){
 			 alert('dentro');
 			 		 buscarmanta()
 			 });
-			  $('#rojo').tap(function(){
+
+                         $('#rojo').tap(function(){
 			 alert('dentro');
 			 		 buscarrojo()
 			 });
-			  $('#rosa').tap(function(){
+                         $('#rosa').tap(function(){
 			 alert('dentro');
 			 		 buscarrosa()
 			 });
-			  $('#azul').tap(function(){
+                         $('#azul').tap(function(){
 			 alert('dentro');
 			 		 buscarazul()
 			 });
+
+                        $('#modelo').tap(function(){
+			 alert('dentro');
+			 		 buscarmodelo()
+			 });
+
+
 	 });
 });
 
