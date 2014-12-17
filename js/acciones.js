@@ -12,10 +12,10 @@ function buscarmodelo()
 	 if (DatosJSON.datos ==1)
 	 {
 		 alert('datos');
-		 $('#page2').empty();
+		 $('#modelo').empty();
 		  for (var i = 0; i <DatosJSON.vestidos.length  ;i++)
 		  {
-			  $('#page2').append(' <div align="center"> <hr color="#6600FF"> Fotografia: <img src="http://192.168.1.166/proyecto/recursos/fotos/'+DatosJSON.vestidos[i].Modelo+'.jpg"> <br> <hr color="#6600FF">     </div>');
+			  $('#modelo').append(' <div align="center"> <hr color="#6600FF"> Fotografia: <img src="http://192.168.1.166/proyecto/recursos/fotos/'+DatosJSON.vestidos[i].Modelo+'.jpg"> <br> <hr color="#6600FF">     </div>');
 		  }
 		 
 	 }
@@ -439,7 +439,7 @@ $(document).ready(function(e) {
 		 			 alert('listo'); //no
 					 
 		         
-                          $('#page2').tap(function(){
+                          $('#modelo').tap(function(){
 			 alert('dentro');
 			 		 buscarmodelo()
 			 });		          
